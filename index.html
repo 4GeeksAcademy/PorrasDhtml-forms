@@ -13,81 +13,94 @@
 <body>
   <table>
     <form>
-      <div class="card">
+      <div class="card mx-auto" style="width:900px; margin-top: 100px;">
         <h1 class="card-header">Payment form example</h1>
-        <div class="alert alert-danger" role="alert">
-          Some fields are missing
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <label for="cardNumber">Card #</label>
-            <input type="text" class="form-control" placeholder="XXXXXXXXXXXXX" aria-label="cardNumber">
+        <div class="container-md" style="margin-top:10px;">
+          <div class="alert alert-danger p-1 " role="alert">
+            Some fields are missing
           </div>
-          <div class="col-4">
-            <label for="cardNumber">CVC #</label>
-            <input type="text" class="form-control" placeholder="0000" aria-label="CVC">
-          </div>
-          <div class="col-4">
-            <label for="cardNumber">Amount</label>
-          <div class="d-md-flex";>
-            <span>$</span>
-            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount">
-          </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <label for="cardNumber">First name</label>
-            <input type="text" class="form-control" aria-label="First name">
-          </div>
-          <div class="col-6">
-            <label for="cardNumber">Last name</label>
-            <input type="text" class="form-control" aria-label="Last name">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <label for="city">City</label>
-            <input type="text" class="form-control" placeholder="" aria-label="city">
-          </div>
-          <div class="col-4">
-            <label for="stateOptions">State</label>
-            <select class="form-select" aria-label="stateOptions">
-              <option selected>Pick a state</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="col-4">
-            <label for="postalCode">Postal Code</label>
-            <input type="text" class="form-control" aria-label="postalCode">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+          <div class="row">
+            <div class="col-4">
+              <label for="cardNumber">Card #</label>
+              <input type="number" class="form-control" placeholder="XXXXXXXXXXXXX" aria-label="cardNumber">
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
+            <div class="col-4">
+              <label for="cardNumber">CVC #</label>
+              <input type="password" maxlength="3" class="form-control" placeholder="0000" aria-label="CVC">
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-              <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club"></i></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
-              <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex"></i></label>
+            <div class="col-4">
+              <label for="cardNumber">Amount</label>
+              <div class="d-md-flex" ;>
+                <span><b>$</b></span>
+                <input type="number" class="form-control" placeholder="Amount" aria-label="Amount">
+              </div>
             </div>
           </div>
-          <div class="col-6 form-floating">
-            <p>Message</p>
-            <textarea class="form-control" placeholder="Leave a comment here" id="userMessage"
-              style="height: 100px"></textarea>
-            <p>Add any notes here.</p>
+          <div class="row">
+            <div class="col-6">
+              <label for="cardNumber">First name</label>
+              <input type="text" class="form-control" aria-label="First name">
+            </div>
+            <div class="col-6">
+              <label for="cardNumber">Last name</label>
+              <input type="text" class="form-control" aria-label="Last name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label for="city">City</label>
+              <input type="text" class="form-control" placeholder="" aria-label="city">
+            </div>
+            <div class="col-3">
+              <label for="stateOptions">State</label>
+              <select class="form-select" aria-label="stateOptions">
+                <option selected>Pick a state</option>
+                <option value="1">Seattle</option>
+                <option value="2">New York</option>
+                <option value="3">Chicago</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <label for="postalCode">Postal Code</label>
+              <input type="text" class="form-control" aria-label="postalCode">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 ">
+              <label>We accept:</label>
+              <span class="d-block p-2 text-white">
+                <div class="alert alert-dark text-bg-secondary w-52 h-auto p-1 d-inline-flex p-2 bd-highlight" role="alert" >
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1"><i
+                        class="fa-brands fa-cc-mastercard"></i></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option3">
+                    <label class="form-check-label" for="inlineRadio3"><i
+                        class="fa-brands fa-cc-diners-club"></i></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option4">
+                    <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex"></i></label>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div class="col-6 form-floating">
+              <p>Message</p>
+              <textarea class="form-control" placeholder="Leave a comment here" id="userMessage"
+                style="height: 100px"></textarea>
+              <p>Add any notes here.</p>
+            </div>
           </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end card-footer">
@@ -98,4 +111,5 @@
     </form>
   </table>
 </body>
+
 </html>
